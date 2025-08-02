@@ -2,7 +2,8 @@
 db_config.json
 
 # CSV dataset files
-*.csv
+clean_dataset
+dirty_dataset
 
 # VSCode files
 .vscode
