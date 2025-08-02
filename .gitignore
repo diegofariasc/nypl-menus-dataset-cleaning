@@ -1,8 +1,8 @@
 # Local database credentials
 db_config.json
 
-# Dataset
-NYPL-menus
+# CSV dataset files
+*.csv
 
 # VSCode files
 .vscode
