@@ -5,8 +5,8 @@ CREATE DATABASE NYPLMenu;
 USE NYPLMenu;
 
 CREATE TABLE Dish (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
+    id INT,
+    name TEXT,
     description TEXT,
     menus_appeared INT,
     times_appeared INT,
@@ -17,9 +17,9 @@ CREATE TABLE Dish (
 );
 
 CREATE TABLE Menu (
-    id INT PRIMARY KEY,
-    name VARCHAR(255),
-    sponsor VARCHAR(255),
+    id INT,
+    name VARCHAR(1024),
+    sponsor TEXT,
     event VARCHAR(255),
     venue VARCHAR(255),
     place VARCHAR(255),
@@ -32,34 +32,31 @@ CREATE TABLE Menu (
     date DATE,
     location VARCHAR(255),
     location_type VARCHAR(255),
-    currency VARCHAR(10),
+    currency VARCHAR(255),
     currency_symbol VARCHAR(5),
-    status VARCHAR(50),
+    status TEXT,
     page_count INT,
     dish_count INT
 );
 
 CREATE TABLE MenuPage (
-    id INT PRIMARY KEY,
+    id INT,
     menu_id INT,
     page_number INT,
-    image_id INT,
+    image_id BIGINT,
     full_height INT,
     full_width INT,
-    uuid CHAR(36),
-    FOREIGN KEY (menu_id) REFERENCES Menu(id)
+    uuid CHAR(36)
 );
 
 CREATE TABLE MenuItem (
-    id INT PRIMARY KEY,
+    id INT,
     menu_page_id INT,
-    dish_id INT,
     price FLOAT,
     high_price FLOAT,
+    dish_id INT,
     created_at DATETIME,
     updated_at DATETIME,
     xpos FLOAT,
-    ypos FLOAT,
-    FOREIGN KEY (menu_page_id) REFERENCES MenuPage(id),
-    FOREIGN KEY (dish_id) REFERENCES Dish(id)
+    ypos FLOAT
 );
