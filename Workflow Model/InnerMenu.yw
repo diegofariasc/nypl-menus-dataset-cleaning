@@ -1,0 +1,460 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:dish_count
+#@param col-name:date
+#@param expression:value.toNumber()
+#@param col-name:currency
+#@param expression:value.toDate()
+#@param newColumnName:highest_level_location
+#@param expression:value.toUppercase()
+#@param col-name:page_count
+#@param newColumnName:currency_imputed
+#@param col-name:place
+#@param col-name:highest_level_location
+#@param expression:"value"
+#@param newColumnName:is_state
+#@param col-name:venue
+#@param expression:value.trim()
+#@in table0
+#@out table85
+#@begin core/text-transform0#@desc Text transform on cells in column page_count using expression value.toNumber()
+#@param col-name:page_count
+#@param expression:value.toNumber()
+#@in table0
+#@out table1
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column date using expression value.toDate()
+#@param col-name:date
+#@param expression:value.toDate()
+#@in table1
+#@out table2
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column dish_count using expression value.toNumber()
+#@param col-name:dish_count
+#@param expression:value.toNumber()
+#@in table2
+#@out table3
+#@end core/text-transform2
+#@begin core/text-transform3#@desc Text transform on cells in column page_count using expression value.toNumber()
+#@param col-name:page_count
+#@param expression:value.toNumber()
+#@in table3
+#@out table4
+#@end core/text-transform3
+#@begin core/text-transform4#@desc Text transform on cells in column date using expression value.toDate()
+#@param col-name:date
+#@param expression:value.toDate()
+#@in table4
+#@out table5
+#@end core/text-transform4
+#@begin core/text-transform5#@desc Text transform on cells in column dish_count using expression value.toNumber()
+#@param col-name:dish_count
+#@param expression:value.toNumber()
+#@in table5
+#@out table6
+#@end core/text-transform5
+#@begin core/mass-edit0#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table6
+#@out table7
+#@end core/mass-edit0
+#@begin core/mass-edit1#@desc Mass edit cells in column venue
+#@param col-name:venue
+#@in table7
+#@out table8
+#@end core/mass-edit1
+#@begin core/text-transform6#@desc Text transform on cells in column page_count using expression value.toNumber()
+#@param col-name:page_count
+#@param expression:value.toNumber()
+#@in table8
+#@out table9
+#@end core/text-transform6
+#@begin core/text-transform7#@desc Text transform on cells in column date using expression value.toDate()
+#@param col-name:date
+#@param expression:value.toDate()
+#@in table9
+#@out table10
+#@end core/text-transform7
+#@begin core/text-transform8#@desc Text transform on cells in column dish_count using expression value.toNumber()
+#@param col-name:dish_count
+#@param expression:value.toNumber()
+#@in table10
+#@out table11
+#@end core/text-transform8
+#@begin core/mass-edit2#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table11
+#@out table12
+#@end core/mass-edit2
+#@begin core/mass-edit3#@desc Mass edit cells in column venue
+#@param col-name:venue
+#@in table12
+#@out table13
+#@end core/mass-edit3
+#@begin core/row-removal0#@desc Remove rows
+#@param col-name:currency
+#@param expression:"value"
+#@in table13
+#@out table14
+#@end core/row-removal0
+#@begin core/mass-edit4#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table14
+#@out table15
+#@end core/mass-edit4
+#@begin core/mass-edit5#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table15
+#@out table16
+#@end core/mass-edit5
+#@begin core/mass-edit6#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table16
+#@out table17
+#@end core/mass-edit6
+#@begin core/mass-edit7#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table17
+#@out table18
+#@end core/mass-edit7
+#@begin core/mass-edit8#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table18
+#@out table19
+#@end core/mass-edit8
+#@begin core/mass-edit9#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table19
+#@out table20
+#@end core/mass-edit9
+#@begin core/mass-edit10#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table20
+#@out table21
+#@end core/mass-edit10
+#@begin core/mass-edit11#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table21
+#@out table22
+#@end core/mass-edit11
+#@begin core/mass-edit12#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table22
+#@out table23
+#@end core/mass-edit12
+#@begin core/mass-edit13#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table23
+#@out table24
+#@end core/mass-edit13
+#@begin core/mass-edit14#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table24
+#@out table25
+#@end core/mass-edit14
+#@begin core/mass-edit15#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table25
+#@out table26
+#@end core/mass-edit15
+#@begin core/column-addition0#@desc Create column highest_level_location at index 6 based on column place using expression grel:value.match(/.*,([^,]+)$/)[0]
+#@param col-name:place
+#@param newColumnName:"highest_level_location"
+#@in table26
+#@out table27
+#@end core/column-addition0
+#@begin core/text-transform9#@desc Text transform on cells in column place using expression value.toUppercase()
+#@param col-name:place
+#@param expression:value.toUppercase()
+#@in table27
+#@out table28
+#@end core/text-transform9
+#@begin core/row-removal1#@desc Remove rows
+#@param col-name:currency
+#@param expression:"value"
+#@in table28
+#@out table29
+#@end core/row-removal1
+#@begin core/mass-edit16#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table29
+#@out table30
+#@end core/mass-edit16
+#@begin core/mass-edit17#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table30
+#@out table31
+#@end core/mass-edit17
+#@begin core/mass-edit18#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table31
+#@out table32
+#@end core/mass-edit18
+#@begin core/mass-edit19#@desc Mass edit cells in column place
+#@param col-name:place
+#@in table32
+#@out table33
+#@end core/mass-edit19
+#@begin core/mass-edit20#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table33
+#@out table34
+#@end core/mass-edit20
+#@begin core/mass-edit21#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table34
+#@out table35
+#@end core/mass-edit21
+#@begin core/mass-edit22#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table35
+#@out table36
+#@end core/mass-edit22
+#@begin core/mass-edit23#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table36
+#@out table37
+#@end core/mass-edit23
+#@begin core/mass-edit24#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table37
+#@out table38
+#@end core/mass-edit24
+#@begin core/text-transform10#@desc Text transform on cells in column highest_level_location using expression value.trim()
+#@param col-name:highest_level_location
+#@param expression:value.trim()
+#@in table38
+#@out table39
+#@end core/text-transform10
+#@begin core/mass-edit25#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table39
+#@out table40
+#@end core/mass-edit25
+#@begin core/mass-edit26#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table40
+#@out table41
+#@end core/mass-edit26
+#@begin core/mass-edit27#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table41
+#@out table42
+#@end core/mass-edit27
+#@begin core/mass-edit28#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table42
+#@out table43
+#@end core/mass-edit28
+#@begin core/mass-edit29#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table43
+#@out table44
+#@end core/mass-edit29
+#@begin core/mass-edit30#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table44
+#@out table45
+#@end core/mass-edit30
+#@begin core/mass-edit31#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table45
+#@out table46
+#@end core/mass-edit31
+#@begin core/mass-edit32#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table46
+#@out table47
+#@end core/mass-edit32
+#@begin core/mass-edit33#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table47
+#@out table48
+#@end core/mass-edit33
+#@begin core/mass-edit34#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table48
+#@out table49
+#@end core/mass-edit34
+#@begin core/mass-edit35#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table49
+#@out table50
+#@end core/mass-edit35
+#@begin core/mass-edit36#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table50
+#@out table51
+#@end core/mass-edit36
+#@begin core/mass-edit37#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table51
+#@out table52
+#@end core/mass-edit37
+#@begin core/mass-edit38#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table52
+#@out table53
+#@end core/mass-edit38
+#@begin core/mass-edit39#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table53
+#@out table54
+#@end core/mass-edit39
+#@begin core/mass-edit40#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table54
+#@out table55
+#@end core/mass-edit40
+#@begin core/mass-edit41#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table55
+#@out table56
+#@end core/mass-edit41
+#@begin core/mass-edit42#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table56
+#@out table57
+#@end core/mass-edit42
+#@begin core/mass-edit43#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table57
+#@out table58
+#@end core/mass-edit43
+#@begin core/mass-edit44#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table58
+#@out table59
+#@end core/mass-edit44
+#@begin core/mass-edit45#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table59
+#@out table60
+#@end core/mass-edit45
+#@begin core/mass-edit46#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table60
+#@out table61
+#@end core/mass-edit46
+#@begin core/mass-edit47#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table61
+#@out table62
+#@end core/mass-edit47
+#@begin core/mass-edit48#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table62
+#@out table63
+#@end core/mass-edit48
+#@begin core/mass-edit49#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table63
+#@out table64
+#@end core/mass-edit49
+#@begin core/mass-edit50#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table64
+#@out table65
+#@end core/mass-edit50
+#@begin core/mass-edit51#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table65
+#@out table66
+#@end core/mass-edit51
+#@begin core/mass-edit52#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table66
+#@out table67
+#@end core/mass-edit52
+#@begin core/mass-edit53#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table67
+#@out table68
+#@end core/mass-edit53
+#@begin core/mass-edit54#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table68
+#@out table69
+#@end core/mass-edit54
+#@begin core/mass-edit55#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table69
+#@out table70
+#@end core/mass-edit55
+#@begin core/mass-edit56#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table70
+#@out table71
+#@end core/mass-edit56
+#@begin core/mass-edit57#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table71
+#@out table72
+#@end core/mass-edit57
+#@begin core/mass-edit58#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table72
+#@out table73
+#@end core/mass-edit58
+#@begin core/mass-edit59#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table73
+#@out table74
+#@end core/mass-edit59
+#@begin core/mass-edit60#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table74
+#@out table75
+#@end core/mass-edit60
+#@begin core/mass-edit61#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table75
+#@out table76
+#@end core/mass-edit61
+#@begin core/mass-edit62#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table76
+#@out table77
+#@end core/mass-edit62
+#@begin core/mass-edit63#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table77
+#@out table78
+#@end core/mass-edit63
+#@begin core/mass-edit64#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table78
+#@out table79
+#@end core/mass-edit64
+#@begin core/mass-edit65#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table79
+#@out table80
+#@end core/mass-edit65
+#@begin core/mass-edit66#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table80
+#@out table81
+#@end core/mass-edit66
+#@begin core/mass-edit67#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table81
+#@out table82
+#@end core/mass-edit67
+#@begin core/mass-edit68#@desc Mass edit cells in column highest_level_location
+#@param col-name:highest_level_location
+#@in table82
+#@out table83
+#@end core/mass-edit68
+#@begin core/column-addition1#@desc Create column is_state at index 7 based on column highest_level_location using expression grel:length(coalesce(value.match(/(ALABAMA|AL|KENTUCKY|KY|OHIO|OH|ALASKA|AK|LOUISIANA|LA|OKLAHOMA|OK|ARIZONA|AZ|MAINE|ME|OREGON|OR|ARKANSAS|AR|MARYLAND|MD|PENNSYLVANIA|PA|AMERICAN SAMOA|AS|MASSACHUSETTS|MA|PUERTO RICO|PR|CALIFORNIA|CA|MICHIGAN|MI|RHODE ISLAND|RI|COLORADO|CO|MINNESOTA|MN|SOUTH CAROLINA|SC|CONNECTICUT|CT|MISSISSIPPI|MS|SOUTH DAKOTA|SD|DELAWARE|DE|MISSOURI|MO|TENNESSEE|TN|DISTRICT OF COLUMBIA|DC|MONTANA|MT|TEXAS|TX|FLORIDA|FL|NEBRASKA|NE|TRUST TERRITORIES|TT|GEORGIA|GA|NEVADA|NV|UTAH|UT|GUAM|GU|NEW HAMPSHIRE|NH|VERMONT|VT|HAWAII|HI|NEW JERSEY|NJ|VIRGINIA|VA|IDAHO|ID|NEW MEXICO|NM|VIRGIN ISLANDS|VI|ILLINOIS|IL|NEW YORK|NY|WASHINGTON|WA|INDIANA|IN|NORTH CAROLINA|NC|WEST VIRGINIA|WV|IOWA|IA|NORTH DAKOTA|ND|WISCONSIN|WI|KANSAS|KS|NORTHERN MARIANA ISLANDS|MP|WYOMING|WY)/), [])) == 1
+#@param col-name:highest_level_location
+#@param newColumnName:"is_state"
+#@in table83
+#@out table84
+#@end core/column-addition1
+#@begin core/column-addition2#@desc Create column currency_imputed at index 18 based on column currency using expression grel:if(or(value == \"Dollars\", cells[\"is_state\"].value), \"Dollars\", null)
+#@param col-name:currency
+#@param newColumnName:"currency_imputed"
+#@in table84
+#@out table85
+#@end core/column-addition2
+#@end Linear_OR

@@ -1,0 +1,108 @@
+-- ================================
+-- IC validation queries
+-- ================================
+-- Count duplicated ids in Dish (IC1)
+SELECT
+    COUNT(*)
+FROM
+    (
+        SELECT
+            id,
+            COUNT(*) appearances
+        FROM
+            Dish
+        GROUP BY
+            id
+        HAVING
+            COUNT(*) > 1
+    ) Duplicates;
+
+-- Count duplicated ids in Menu (IC2)
+SELECT
+    COUNT(*)
+FROM
+    (
+        SELECT
+            id,
+            COUNT(*) appearances
+        FROM
+            Menu
+        GROUP BY
+            id
+        HAVING
+            COUNT(*) > 1
+    ) Duplicates;
+
+-- Detect duplicated ids in MenuItem (IC3)
+SELECT
+    COUNT(*)
+FROM
+    (
+        SELECT
+            id,
+            COUNT(*) appearances
+        FROM
+            MenuItem
+        GROUP BY
+            id
+        HAVING
+            COUNT(*) > 1
+    ) Duplicates;
+
+-- Detect duplicated ids in MenuPage (IC4)
+SELECT
+    COUNT(*)
+FROM
+    (
+        SELECT
+            id,
+            COUNT(*) appearances
+        FROM
+            MenuPage
+        GROUP BY
+            id
+        HAVING
+            COUNT(*) > 1
+    ) Duplicates;
+
+-- Detect null menu_id values in MenuPage dataset (IC5)
+SELECT
+    COUNT(*)
+FROM
+    MenuPage
+WHERE
+    menu_id IS NULL;
+
+-- Detect null dish_id values in MenuItem dataset (IC6)
+SELECT
+    COUNT(*)
+FROM
+    MenuItem
+WHERE
+    dish_id IS NULL;
+
+-- Detect null dish_id values in MenuItem dataset (IC7)
+SELECT
+    COUNT(*)
+FROM
+    MenuItem
+WHERE
+    menu_page_id IS NULL;
+
+-- Detect date values out of range in Menu dataset (IC8)
+SELECT
+    COUNT(*)
+FROM
+    Menu
+WHERE
+    YEAR(date) < 1851
+    OR YEAR(date) > 2015;
+
+-- Detect extraneous currencies in Menu dataset (IC9)
+SELECT
+    COUNT(*)
+FROM
+    Menu
+WHERE
+    currency IS NOT NULL
+    AND currency != "Dollars";

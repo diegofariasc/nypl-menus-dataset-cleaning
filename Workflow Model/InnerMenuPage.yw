@@ -1,0 +1,24 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:uuid
+#@param expression:value.toString()
+#@in table0
+#@out table3
+#@begin core/text-transform0#@desc Text transform on cells in column uuid using expression value.toString()
+#@param col-name:uuid
+#@param expression:value.toString()
+#@in table0
+#@out table1
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column uuid using expression value.toString()
+#@param col-name:uuid
+#@param expression:value.toString()
+#@in table1
+#@out table2
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column uuid using expression value.toString()
+#@param col-name:uuid
+#@param expression:value.toString()
+#@in table2
+#@out table3
+#@end core/text-transform2
+#@end Linear_OR

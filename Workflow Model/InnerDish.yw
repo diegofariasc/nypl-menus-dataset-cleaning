@@ -1,0 +1,349 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:name
+#@param col-name:highest_price
+#@param newColumnName:constant_price
+#@param col-name:last_appeared
+#@param col-name:first_appeared
+#@param expression:value.toNumber()
+#@param col-name:lowest_price
+#@in table0
+#@out table65
+#@begin core/text-transform0#@desc Text transform on cells in column lowest_price using expression value.toNumber()
+#@param col-name:lowest_price
+#@param expression:value.toNumber()
+#@in table0
+#@out table1
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column highest_price using expression value.toNumber()
+#@param col-name:highest_price
+#@param expression:value.toNumber()
+#@in table1
+#@out table2
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column first_appeared using expression value.toNumber()
+#@param col-name:first_appeared
+#@param expression:value.toNumber()
+#@in table2
+#@out table3
+#@end core/text-transform2
+#@begin core/text-transform3#@desc Text transform on cells in column last_appeared using expression value.toNumber()
+#@param col-name:last_appeared
+#@param expression:value.toNumber()
+#@in table3
+#@out table4
+#@end core/text-transform3
+#@begin core/text-transform4#@desc Text transform on cells in column lowest_price using expression value.toNumber()
+#@param col-name:lowest_price
+#@param expression:value.toNumber()
+#@in table4
+#@out table5
+#@end core/text-transform4
+#@begin core/text-transform5#@desc Text transform on cells in column highest_price using expression value.toNumber()
+#@param col-name:highest_price
+#@param expression:value.toNumber()
+#@in table5
+#@out table6
+#@end core/text-transform5
+#@begin core/text-transform6#@desc Text transform on cells in column first_appeared using expression value.toNumber()
+#@param col-name:first_appeared
+#@param expression:value.toNumber()
+#@in table6
+#@out table7
+#@end core/text-transform6
+#@begin core/text-transform7#@desc Text transform on cells in column last_appeared using expression value.toNumber()
+#@param col-name:last_appeared
+#@param expression:value.toNumber()
+#@in table7
+#@out table8
+#@end core/text-transform7
+#@begin core/mass-edit0#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table8
+#@out table9
+#@end core/mass-edit0
+#@begin core/mass-edit1#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table9
+#@out table10
+#@end core/mass-edit1
+#@begin core/mass-edit2#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table10
+#@out table11
+#@end core/mass-edit2
+#@begin core/mass-edit3#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table11
+#@out table12
+#@end core/mass-edit3
+#@begin core/mass-edit4#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table12
+#@out table13
+#@end core/mass-edit4
+#@begin core/mass-edit5#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table13
+#@out table14
+#@end core/mass-edit5
+#@begin core/mass-edit6#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table14
+#@out table15
+#@end core/mass-edit6
+#@begin core/mass-edit7#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table15
+#@out table16
+#@end core/mass-edit7
+#@begin core/mass-edit8#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table16
+#@out table17
+#@end core/mass-edit8
+#@begin core/mass-edit9#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table17
+#@out table18
+#@end core/mass-edit9
+#@begin core/mass-edit10#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table18
+#@out table19
+#@end core/mass-edit10
+#@begin core/mass-edit11#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table19
+#@out table20
+#@end core/mass-edit11
+#@begin core/mass-edit12#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table20
+#@out table21
+#@end core/mass-edit12
+#@begin core/mass-edit13#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table21
+#@out table22
+#@end core/mass-edit13
+#@begin core/mass-edit14#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table22
+#@out table23
+#@end core/mass-edit14
+#@begin core/mass-edit15#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table23
+#@out table24
+#@end core/mass-edit15
+#@begin core/mass-edit16#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table24
+#@out table25
+#@end core/mass-edit16
+#@begin core/mass-edit17#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table25
+#@out table26
+#@end core/mass-edit17
+#@begin core/mass-edit18#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table26
+#@out table27
+#@end core/mass-edit18
+#@begin core/mass-edit19#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table27
+#@out table28
+#@end core/mass-edit19
+#@begin core/mass-edit20#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table28
+#@out table29
+#@end core/mass-edit20
+#@begin core/mass-edit21#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table29
+#@out table30
+#@end core/mass-edit21
+#@begin core/mass-edit22#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table30
+#@out table31
+#@end core/mass-edit22
+#@begin core/mass-edit23#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table31
+#@out table32
+#@end core/mass-edit23
+#@begin core/mass-edit24#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table32
+#@out table33
+#@end core/mass-edit24
+#@begin core/mass-edit25#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table33
+#@out table34
+#@end core/mass-edit25
+#@begin core/text-transform8#@desc Text transform on cells in column lowest_price using expression value.toNumber()
+#@param col-name:lowest_price
+#@param expression:value.toNumber()
+#@in table34
+#@out table35
+#@end core/text-transform8
+#@begin core/text-transform9#@desc Text transform on cells in column highest_price using expression value.toNumber()
+#@param col-name:highest_price
+#@param expression:value.toNumber()
+#@in table35
+#@out table36
+#@end core/text-transform9
+#@begin core/text-transform10#@desc Text transform on cells in column first_appeared using expression value.toNumber()
+#@param col-name:first_appeared
+#@param expression:value.toNumber()
+#@in table36
+#@out table37
+#@end core/text-transform10
+#@begin core/text-transform11#@desc Text transform on cells in column last_appeared using expression value.toNumber()
+#@param col-name:last_appeared
+#@param expression:value.toNumber()
+#@in table37
+#@out table38
+#@end core/text-transform11
+#@begin core/mass-edit26#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table38
+#@out table39
+#@end core/mass-edit26
+#@begin core/mass-edit27#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table39
+#@out table40
+#@end core/mass-edit27
+#@begin core/mass-edit28#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table40
+#@out table41
+#@end core/mass-edit28
+#@begin core/mass-edit29#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table41
+#@out table42
+#@end core/mass-edit29
+#@begin core/mass-edit30#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table42
+#@out table43
+#@end core/mass-edit30
+#@begin core/mass-edit31#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table43
+#@out table44
+#@end core/mass-edit31
+#@begin core/mass-edit32#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table44
+#@out table45
+#@end core/mass-edit32
+#@begin core/mass-edit33#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table45
+#@out table46
+#@end core/mass-edit33
+#@begin core/mass-edit34#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table46
+#@out table47
+#@end core/mass-edit34
+#@begin core/mass-edit35#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table47
+#@out table48
+#@end core/mass-edit35
+#@begin core/mass-edit36#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table48
+#@out table49
+#@end core/mass-edit36
+#@begin core/mass-edit37#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table49
+#@out table50
+#@end core/mass-edit37
+#@begin core/mass-edit38#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table50
+#@out table51
+#@end core/mass-edit38
+#@begin core/mass-edit39#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table51
+#@out table52
+#@end core/mass-edit39
+#@begin core/mass-edit40#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table52
+#@out table53
+#@end core/mass-edit40
+#@begin core/mass-edit41#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table53
+#@out table54
+#@end core/mass-edit41
+#@begin core/mass-edit42#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table54
+#@out table55
+#@end core/mass-edit42
+#@begin core/mass-edit43#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table55
+#@out table56
+#@end core/mass-edit43
+#@begin core/mass-edit44#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table56
+#@out table57
+#@end core/mass-edit44
+#@begin core/mass-edit45#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table57
+#@out table58
+#@end core/mass-edit45
+#@begin core/mass-edit46#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table58
+#@out table59
+#@end core/mass-edit46
+#@begin core/mass-edit47#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table59
+#@out table60
+#@end core/mass-edit47
+#@begin core/mass-edit48#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table60
+#@out table61
+#@end core/mass-edit48
+#@begin core/mass-edit49#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table61
+#@out table62
+#@end core/mass-edit49
+#@begin core/mass-edit50#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table62
+#@out table63
+#@end core/mass-edit50
+#@begin core/mass-edit51#@desc Mass edit cells in column name
+#@param col-name:name
+#@in table63
+#@out table64
+#@end core/mass-edit51
+#@begin core/column-addition0#@desc Create column constant_price at index 8 based on column lowest_price using expression grel:if(value == cells[\"highest_price\"].value, value, null)
+#@param col-name:lowest_price
+#@param newColumnName:"constant_price"
+#@in table64
+#@out table65
+#@end core/column-addition0
+#@end Linear_OR

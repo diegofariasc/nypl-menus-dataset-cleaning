@@ -1,0 +1,48 @@
+---
+config:
+  layout: dagre
+  theme: redux
+---
+flowchart TB
+ subgraph Phase1["Data Profiling Phase"]
+        data_profiling(["Data Profiling & Missing Info Identification"])
+  end
+ subgraph Phase2["Data Cleaning Phase (OpenRefine)"]
+        cleaning_openrefine(["Data Cleaning with OpenRefine<br>(Standardization, Outlier Filtering, Clustering, Imputation)"])
+  end
+ subgraph Phase3["Data Loading Phase"]
+        mysql_creation(["MySQL Database Creation<br>(Relational Schema Setup)"])
+        data_load(["Load Clean Data into MySQL<br>(Python Loader + LOAD DATA INFILE)"])
+  end
+ subgraph Phase4["IC Violation Checks<br><br>"]
+        ic_checks(["Integrity Constraint Violation Checks<br>(Pre- and Post-Cleaning Validation)"])
+  end
+    raw_menu["dirty_dataset/Menu.csv"] --> data_profiling
+    raw_menupage["dirty_dataset/MenuPage.csv"] --> data_profiling
+    raw_menuitem["dirty_dataset/MenuItem.csv"] --> data_profiling
+    raw_dish["dirty_dataset/Dish.csv"] --> data_profiling
+    data_profiling --> cleaning_openrefine & mysql_creation
+    cleaning_openrefine --> clean_menu["clean_dataset/Menu.csv"] & clean_menupage["clean_dataset/MenuPage.csv"] & clean_menuitem["clean_dataset/MenuItem.csv"] & clean_dish["clean_dataset/Dish.csv"]
+    clean_menu --> data_load
+    clean_menupage --> data_load
+    clean_menuitem --> data_load
+    clean_dish --> data_load
+    mysql_creation --> data_load
+    data_load --> ic_checks
+    ic_checks --> final_output["Clean and Validated Dataset<br>"]
+     data_profiling:::process
+     cleaning_openrefine:::process
+     mysql_creation:::process
+     data_load:::process
+     ic_checks:::process
+     raw_menu:::artifact
+     raw_menupage:::artifact
+     raw_menuitem:::artifact
+     raw_dish:::artifact
+     clean_menu:::artifact
+     clean_menupage:::artifact
+     clean_menuitem:::artifact
+     clean_dish:::artifact
+     final_output:::artifact
+    classDef artifact fill:#FFFFFF,stroke:#333,stroke-width:1px
+    classDef process fill:#FFF2B6,stroke:#333,stroke-width:1px,rx:10,ry:10
